@@ -15,3 +15,13 @@ pair<long long, long long> getMinMax(long long a[], int n) {
     }
     return {min, max};
 }
+
+
+----------------   Other Way   ------------------
+
+pair<long long, long long> getMinMax(long long a[], int n) {
+    sort(a,a+n);
+    int max = a[n-1];
+    int min = a[0];
+    return {min, max};
+}
