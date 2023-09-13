@@ -1,0 +1,31 @@
+----------  Problem: Sort an array of 0s, 1s and 2s  -----------
+----------  https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1  ---------
+
+----------  Solution  -------------
+
+class Solution
+{
+    public:
+    void sort012(int a[], int n)
+    {
+        int s = 0;
+        int e = n-1;
+        int m = 0;
+        
+        while(m<=e) {
+            if(a[m]==0) {
+                swap(a[s],a[m]);
+                s++;
+                m++;
+            }
+            else if(a[m]==1) {
+                m++;
+            }
+            else if(a[m]==2) {
+                swap(a[m],a[e]);
+                e--;
+            }
+        }
+    }
+};
+
